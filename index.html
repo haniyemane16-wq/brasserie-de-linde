@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brasserie De Linde – Fine Dining Amsterdam</title>
+  <meta name="description" content="Brasserie De Linde — een culinaire ervaring in het hart van Amsterdam. Seizoensgebonden gerechten, uitzonderlijke wijnen en een onvergetelijke sfeer." />
+
+  <!-- SEO / Open Graph -->
+  <meta property="og:title" content="Brasserie De Linde – Fine Dining Amsterdam" />
+  <meta property="og:description" content="Seizoensgebonden fine dining in het hart van Amsterdam. Reserveer uw tafel." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" />
+  <meta name="theme-color" content="#C9A84C" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231A2E1A'/><text y='.9em' font-size='75' x='12'>🍃</text></svg>" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Brasserie De Linde",
+    "description": "Fine dining restaurant in Amsterdam met seizoensgebonden menu",
+    "servesCuisine": "French-Dutch Fine Dining",
+    "priceRange": "€€€€",
+    "telephone": "+31206543210",
+    "email": "reservatie@delinde.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lindegracht 45",
+      "addressLocality": "Amsterdam",
+      "postalCode": "1015 KH",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday"], "opens": "18:00", "closes": "22:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:30", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "17:00", "closes": "21:30" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "286" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a href="#menu" class="skip-link">Ga naar inhoud</a>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span><i class="fa-solid fa-phone"></i> <a href="tel:+31206543210">020 – 654 32 10</a></span>
+        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:reservatie@delinde.nl">reservatie@delinde.nl</a></span>
+      </div>
+      <div class="topbar__center">
+        <span>Wo – Do: 18:00–22:30 &nbsp;|&nbsp; Vr – Za: 17:30–23:00 &nbsp;|&nbsp; Zo: 17:00–21:30</span>
+      </div>
+      <div class="topbar__right">
+        <a href="#reservatie" class="topbar__reserve">Reserveer Tafel</a>
+        <div class="topbar__socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">
+        <div class="logo__emblem">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <div class="logo__text">
+          <span class="logo__name">Brasserie De Linde</span>
+          <span class="logo__sub">Fine Dining · Amsterdam</span>
+        </div>
+      </a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#verhaal" class="nav-link">Ons Verhaal</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#chef" class="nav-link">De Chef</a></li>
+        <li><a href="#sfeer" class="nav-link">Sfeer</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#reservatie" class="btn btn--gold">Reserveer</a></li>
+      </ul>
+      <button class="navbar__toggle" id="navToggle" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__overlay"></div>
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=85&auto=format&fit=crop" alt="Brasserie De Linde" class="hero__img" loading="eager" />
+    </div>
+    <div class="container hero__content">
+      <div class="hero__ornament reveal-up">
+        <span class="ornament-line"></span>
+        <i class="fa-solid fa-leaf"></i>
+        <span class="ornament-line"></span>
+      </div>
+      <p class="hero__pretitle reveal-up">Amsterdam · Sinds 2009</p>
+      <h1 class="hero__title reveal-up">
+        Een Culinaire<br />
+        <em>Ontdekkingsreis</em>
+      </h1>
+      <p class="hero__sub reveal-up">
+        Seizoensgebonden fine dining in het hart van Amsterdam.<br />
+        Elk gerecht vertelt het verhaal van de natuur — puur, eerlijk en verfijnd.
+      </p>
+      <div class="hero__actions reveal-up">
+        <a href="#reservatie" class="btn btn--gold btn--lg">
+          Reserveer Uw Tafel
+        </a>
+        <a href="#menu" class="btn btn--ghost btn--lg">
+          Bekijk Menu
+        </a>
+      </div>
+      <div class="hero__awards reveal-up">
+        <div class="award-item">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <span>2 Michelin Sterren</span>
+        </div>
+        <div class="award-divider"></div>
+        <div class="award-item">
+          <i class="fa-solid fa-wine-glass"></i>
+          <span>Wine Spectator Award</span>
+        </div>
+        <div class="award-divider"></div>
+        <div class="award-item">
+          <i class="fa-solid fa-leaf"></i>
+          <span>Green Key Gecertificeerd</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO QUOTE ===== -->
+  <section class="quote-section">
+    <div class="container quote-section__inner">
+      <div class="quote-line"></div>
+      <blockquote class="reveal-up">
+        <p>"Koken is de kunst van het omzetten van ingrediënten in herinneringen."</p>
+        <cite>— Chef Thomas van der Linden</cite>
+      </blockquote>
+      <div class="quote-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ONS VERHAAL ===== -->
+  <section class="verhaal section" id="verhaal">
+    <div class="container verhaal__inner">
+      <div class="verhaal__visual reveal-left">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80&auto=format&fit=crop" alt="Interieur Brasserie De Linde" class="verhaal__img verhaal__img--main" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1600565193348-f74bd3960d0a?w=400&q=80&auto=format&fit=crop" alt="Gerecht detail" class="verhaal__img verhaal__img--accent" loading="lazy" />
+        <div class="verhaal__badge">
+          <span class="badge-year">2009</span>
+          <span class="badge-label">Opgericht</span>
+        </div>
+      </div>
+      <div class="verhaal__content reveal-right">
+        <span class="section-tag">Ons Verhaal</span>
+        <h2 class="section-title">Meer dan <em>een maaltijd</em></h2>
+        <p class="verhaal__lead">In 2009 opende chef Thomas van der Linden de deuren van Brasserie De Linde — met één overtuiging: dat eten een verhaal moet vertellen.</p>
+        <p>Wij werken uitsluitend met seizoensgebonden ingrediënten van lokale Nederlandse boeren en vissers. Van de moestuin tot het bord — alles is doordacht, puur en respectvol tegenover de natuur.</p>
+        <p>Ons interieur is een eerbetoon aan de Nederlandse landschappen: warm hout, zacht groen, vergeeld linnen en het zachte schijnsel van kaarslicht. Een omgeving die uitnodigt tot vertraging.</p>
+        <div class="verhaal__stats">
+          <div class="v-stat reveal-up">
+            <span class="v-stat__num">15+</span>
+            <span class="v-stat__label">Jaar ervaring</span>
+          </div>
+          <div class="v-stat reveal-up">
+            <span class="v-stat__num">8</span>
+            <span class="v-stat__label">Vaste leveranciers</span>
+          </div>
+          <div class="v-stat reveal-up">
+            <span class="v-stat__num">100%</span>
+            <span class="v-stat__label">Lokaal & Seizoen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="menu section section--dark" id="menu">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag section-tag--gold">Seizoensmenu</span>
+        <h2 class="section-title section-title--light">Menu <em>Lente 2026</em></h2>
+        <p class="section-sub section-sub--light">Een meergangenmenu dat de beste smaken van het seizoen viert. Wij bieden een 4- en 7-gangenmenu aan.</p>
+      </div>
+
+      <div class="menu__tabs reveal-up">
+        <button class="menu-tab active" data-menu="amuse">Amuse</button>
+        <button class="menu-tab" data-menu="voor">Voorgerechten</button>
+        <button class="menu-tab" data-menu="hoofd">Hoofdgerechten</button>
+        <button class="menu-tab" data-menu="dessert">Desserts</button>
+      </div>
+
+      <div class="menu__content" id="menuContent">
+        <!-- Amuse -->
+        <div class="menu-panel active" id="amuse-panel">
+          <div class="menu-panel__grid">
+            <div class="menu-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80&auto=format&fit=crop" alt="Amuse" loading="lazy" />
+              <div class="menu-item__info">
+                <div class="menu-item__header">
+                  <h3>Tomaat Consommé</h3>
+                  <span class="menu-item__label">Amusegerecht</span>
+                </div>
+                <p>Heldere bouillon van erfgoedtomaten, basilicumolie, zee-egel crème en krokant brood.</p>
+                <div class="menu-item__tags">
+                  <span class="tag"><i class="fa-solid fa-seedling"></i> Vegetarisch</span>
+                  <span class="tag"><i class="fa-solid fa-leaf"></i> Lokaal</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=600&q=80&auto=format&fit=crop" alt="Amuse 2" loading="lazy" />
+              <div class="menu-item__info">
+                <div class="menu-item__header">
+                  <h3>Noord Zee Oester</h3>
+                  <span class="menu-item__label">Amusegerecht</span>
+                </div>
+                <p>Verse Zeeuwse oester, komkommer granité, yuzu gel en Ossetra kaviaar.</p>
+                <div class="menu-item__tags">
+                  <span class="tag"><i class="fa-solid fa-fish"></i> Zeevruchten</span>
+                  <span class="tag tag--gold"><i class="fa-solid fa-star"></i> Chef's keuze</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Voorgerechten -->
+        <div class="menu-panel" id="voor-panel">
+          <div class="menu-panel__grid">
+            <div class="menu-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?w=600&q=80&auto=format&fit=crop" alt="Voorgerecht" loading="lazy" />
+              <div class="menu-item__info">
+                <div class="menu-item__header">
+                  <h3>Hollandse Asperge</h3>
+                  <span class="menu-item__price">€24</span>
+                </div>
+                <p>Witte asperge van Limburg, gepocheerd ei, truffelmayonaise, hazelnootschuim en Parmezaan.</p>
+                <div class="menu-item__tags">
+                  <span class="tag"><i class="fa-solid fa-seedling"></i> Vegetarisch</span>
+                  <span class="tag tag--gold"><i class="fa-solid fa-star"></i> Seizoen</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80&auto=format&fit=crop" alt="Voorgerecht 2" loading="lazy" />
+              <div class="menu-item__info">
+                <div class="menu-item__header">
+                  <h3>Heilbot Tartar</h3>
+                  <span class="menu-item__price">€28</span>
+                </div>
+                <p>Verse heilbot, citrus vinaigrette, komkommer, radijs, dille crème en krokante augurk.</p>
+                <div class="menu-item__tags">
+                  <span class="tag"><i class="fa-solid fa-fish"></i> Vis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hoofdgerechten -->
+        <div class="menu-panel" id="hoofd-panel">
+          <div class="menu-panel__grid">
+            <div class="menu-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop" alt="Hoofdgerecht" loading="lazy" />
+              <div class="menu-item__info">
+                <div class="menu-item__header">
+                  <h3>Anjou Duif</h3>
+                  <span class="menu-item__price">€48</span>
+                </div>
+                <p>Frans duivenborst, geroosterde bietjus, wilde spinazie, foie gras mousse en truffelaardappel.</p>
+                <div class="menu-item__tags">
+                  <span class="tag tag--gold"><i class="fa-solid fa-star"></i> Signature</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=80&auto=format&fit=crop" alt="Hoofdgerecht 2" loading="lazy" />
+              <div class="menu-item__info">
+                <div class="menu-item__header">
+                  <h3>Zeebaars</h3>
+                  <span class="menu-item__price">€42</span>
+                </div>
+                <p>Wild gevangen zeebaars, venkel-saffraan bouillon, zeekraal, gnocchi van aardpeer en citroenmousse.</p>
+                <div class="menu-item__tags">
+                  <span class="tag"><i class="fa-solid fa-fish"></i> Vis</span>
+                  <span class="tag"><i class="fa-solid fa-leaf"></i> Duurzaam</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-panel" id="dessert-panel">
+          <div class="menu-panel__grid">
+            <div class="menu-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80&auto=format&fit=crop" alt="Dessert" loading="lazy" />
+              <div class="menu-item__info">
+                <div class="menu-item__header">
+                  <h3>Chocolade Soufflé</h3>
+                  <span class="menu-item__price">€18</span>
+                </div>
+                <p>Valrhona pure chocolade soufflé, Tahiti vanille ijs, goud blad en Armagnac saus.</p>
+                <div class="menu-item__tags">
+                  <span class="tag"><i class="fa-solid fa-seedling"></i> Vegetarisch</span>
+                  <span class="tag tag--gold"><i class="fa-solid fa-star"></i> Klassiek</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80&auto=format&fit=crop" alt="Dessert 2" loading="lazy" />
+              <div class="menu-item__info">
+                <div class="menu-item__header">
+                  <h3>Aardbei Pavlova</h3>
+                  <span class="menu-item__price">€16</span>
+                </div>
+                <p>Knapperige meringue, mascarpone crème, Hollandse aardbeien, basilicum gelei en pistache krokant.</p>
+                <div class="menu-item__tags">
+                  <span class="tag"><i class="fa-solid fa-seedling"></i> Vegetarisch</span>
+                  <span class="tag tag--gold"><i class="fa-solid fa-star"></i> Seizoen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu__footer reveal-up">
+        <p>4-gangenmenu <span class="price-gold">€95</span> p.p. &nbsp;|&nbsp; 7-gangenmenu <span class="price-gold">€145</span> p.p. &nbsp;|&nbsp; Wijnparing <span class="price-gold">+€55</span></p>
+        <a href="#reservatie" class="btn btn--gold btn--lg">Tafel Reserveren</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHEF ===== -->
+  <section class="chef section" id="chef">
+    <div class="container chef__inner">
+      <div class="chef__content reveal-left">
+        <span class="section-tag">De Chef</span>
+        <h2 class="section-title">Thomas <em>van der Linden</em></h2>
+        <p class="chef__lead">Opgeleid in Parijs en Lyon, gestationeerd in enkele van Europa's meest gerenommeerde keukens, keerde Thomas in 2009 terug naar zijn thuisstad Amsterdam.</p>
+        <p>Zijn filosofie is simpel maar onwrikbaar: respect voor het product, eerlijkheid op het bord. Geen trucs, geen overweldigende technieken — alleen het beste wat de natuur ons geeft, op zijn puurste manier bereid.</p>
+        <p>Onder zijn leiding verwierf De Linde twee Michelin-sterren (2014 en 2018) en een vaste plek in de top-10 van de Nederlandse culinaire gids.</p>
+        <div class="chef__awards">
+          <div class="chef-award">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>2 Michelin Sterren</span>
+          </div>
+          <div class="chef-award">
+            <i class="fa-solid fa-trophy"></i>
+            <span>NL Chef van het Jaar 2021</span>
+          </div>
+          <div class="chef-award">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Auteur van 'De Smaak van Seizoenen'</span>
+          </div>
+        </div>
+      </div>
+      <div class="chef__visual reveal-right">
+        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80&auto=format&fit=crop" alt="Chef Thomas van der Linden" class="chef__img" loading="lazy" />
+        <div class="chef__quote-card">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>"Elk seizoen is een nieuw hoofdstuk."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SFEER GALLERY ===== -->
+  <section class="sfeer section--gray" id="sfeer">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Beleef De Sfeer</span>
+        <h2 class="section-title">Waar Elke <em>Avond</em> Bijzonder Is</h2>
+      </div>
+    </div>
+    <div class="sfeer__gallery">
+      <div class="gallery-item gallery-item--tall reveal-up">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80&auto=format&fit=crop" alt="Restaurant interieur" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <span>Het Restaurant</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal-up">
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&q=80&auto=format&fit=crop" alt="Bar & Lounge" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Bar & Lounge</span></div>
+      </div>
+      <div class="gallery-item reveal-up">
+        <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&q=80&auto=format&fit=crop" alt="Keuken" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Open Keuken</span></div>
+      </div>
+      <div class="gallery-item gallery-item--wide reveal-up">
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=1200&q=80&auto=format&fit=crop" alt="Privédiner" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Privé Dining</span></div>
+      </div>
+      <div class="gallery-item reveal-up">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80&auto=format&fit=crop" alt="Wijnkelder" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Wijnkelder</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIVE DINING ===== -->
+  <section class="prive section">
+    <div class="container prive__inner">
+      <div class="prive__content reveal-up">
+        <span class="section-tag">Exclusief</span>
+        <h2 class="section-title">Privé <em>Dining</em></h2>
+        <p>Voor bijzondere gelegenheden bieden wij onze exclusieve privézaal voor 8 tot 24 gasten. Of het nu een zakelijk diner, een jubileum of een familiereünie is — wij verzorgen elk detail.</p>
+        <ul class="prive__list">
+          <li><i class="fa-solid fa-check"></i> Persoonlijk samengesteld menu</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated sommelier & service team</li>
+          <li><i class="fa-solid fa-check"></i> Audio-visuele faciliteiten beschikbaar</li>
+          <li><i class="fa-solid fa-check"></i> Bloemarrangement op maat</li>
+          <li><i class="fa-solid fa-check"></i> Geheimhouding & discretie gegarandeerd</li>
+        </ul>
+        <a href="#reservatie" class="btn btn--dark btn--lg">Informeer Vrijblijvend</a>
+      </div>
+      <div class="prive__visual reveal-right">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80&auto=format&fit=crop" alt="Privé dining zaal" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="reviews section section--dark" id="reviews">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag section-tag--gold">Wat gasten zeggen</span>
+        <h2 class="section-title section-title--light">Onvergetelijke <em>Ervaringen</em></h2>
+        <div class="reviews__rating">
+          <div class="stars-gold">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span>4.8 / 5 — 286 recensies op Google & TripAdvisor</span>
+        </div>
+      </div>
+      <div class="reviews__grid">
+        <div class="review-card reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Een culinaire belevenis van de hoogste orde. De asperge met truffel was puur magie. Het personeel is attent zonder opdringerig te zijn — precies het evenwicht dat je zoekt bij fine dining."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">IR</div>
+            <div>
+              <strong>Isabelle Roux</strong>
+              <span>Parijs, Frankrijk</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card review-card--featured reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Wij vierden onze 25e trouwdag en De Linde maakte het onvergetelijk. Van de amuse tot de mignardises — elk detail klopte. De wijnparing van de sommelier was buitengewoon."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">PV</div>
+            <div>
+              <strong>Peter & Ans Visser</strong>
+              <span>Amsterdam</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Als fervent restaurantbezoeker wereldwijd kan ik zeggen: De Linde staat in de top vijf van mijn ervaringen. De zeebaars was fenomenaal en het interieur ademt rust en klasse."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">MK</div>
+            <div>
+              <strong>Michael König</strong>
+              <span>München, Duitsland</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__logos reveal-up">
+        <div class="review-logo"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> Michelin</div>
+        <div class="review-logo"><i class="fa-brands fa-tripadvisor"></i> TripAdvisor #3 Amsterdam</div>
+        <div class="review-logo"><i class="fa-solid fa-utensils"></i> Gault&Millau 17/20</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVATIE ===== -->
+  <section class="reservatie section" id="reservatie">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Direct regelen</span>
+        <h2 class="section-title">Reserveer <em>Uw Tafel</em></h2>
+        <p class="section-sub">Wij bevestigen uw reservering binnen 2 uur. Voor dezelfde dag reserveren — bel ons direct.</p>
+      </div>
+      <div class="reservatie__inner">
+        <form class="reservatie-form reveal-left" id="reservatieForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="naam">Naam *</label>
+              <input type="text" id="naam" name="naam" placeholder="Voor- en achternaam" required autocomplete="name" />
+              <span class="form-error" id="naam-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefoon">Telefoon *</label>
+              <input type="tel" id="telefoon" name="telefoon" placeholder="06 – 12 34 56 78" required autocomplete="tel" />
+              <span class="form-error" id="telefoon-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-mailadres *</label>
+              <input type="email" id="email" name="email" placeholder="naam@email.nl" required autocomplete="email" />
+              <span class="form-error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="gasten">Aantal gasten *</label>
+              <select id="gasten" name="gasten" required>
+                <option value="" disabled selected>Selecteer...</option>
+                <option value="1">1 persoon</option>
+                <option value="2">2 personen</option>
+                <option value="3">3 personen</option>
+                <option value="4">4 personen</option>
+                <option value="5">5 personen</option>
+                <option value="6">6 personen</option>
+                <option value="7-8">7–8 personen</option>
+                <option value="prive">9+ (Privé Dining)</option>
+              </select>
+              <span class="form-error" id="gasten-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="datum">Datum *</label>
+              <input type="date" id="datum" name="datum" required />
+              <span class="form-error" id="datum-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="tijd">Gewenste tijd *</label>
+              <select id="tijd" name="tijd" required>
+                <option value="" disabled selected>Kies tijdstip...</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+              </select>
+              <span class="form-error" id="tijd-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="menu-keuze">Menukeuze</label>
+              <select id="menu-keuze" name="menu-keuze">
+                <option value="" disabled selected>Kies menu...</option>
+                <option value="4-gangen">4-gangenmenu (€95 p.p.)</option>
+                <option value="7-gangen">7-gangenmenu (€145 p.p.)</option>
+                <option value="prive-menu">Privé Dining Menu</option>
+                <option value="later">Later bepalen</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="allergenen">Allergieën / dieetwensen</label>
+              <input type="text" id="allergenen" name="allergenen" placeholder="bijv. glutenvrij, vegetarisch" />
+            </div>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="opmerking">Bijzondere gelegenheid of wensen</label>
+            <textarea id="opmerking" name="opmerking" rows="3" placeholder="Verjaardag, huwelijksjubileum, zakelijk diner..."></textarea>
+          </div>
+          <div class="form-group form-group--full form-group--checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="akkoord" name="akkoord" required />
+              <span class="checkbox-custom"></span>
+              Ik ga akkoord met de <a href="#" class="form-link">annuleringsvoorwaarden</a> en <a href="#" class="form-link">privacyverklaring</a>. *
+            </label>
+            <span class="form-error" id="akkoord-error"></span>
+          </div>
+          <button type="submit" class="btn btn--gold btn--lg btn--full" id="submitBtn">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Reservering Aanvragen</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4>Dank u voor uw reservering.</h4>
+            <p>U ontvangt binnen 2 uur een bevestiging per e-mail. Wij verheugen ons op uw bezoek.</p>
+          </div>
+        </form>
+        <div class="reservatie__info reveal-right">
+          <h3>Contact & Locatie</h3>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Reserveringen</strong>
+              <a href="tel:+31206543210">020 – 654 32 10</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <strong>E-mail</strong>
+              <a href="mailto:reservatie@delinde.nl">reservatie@delinde.nl</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Adres</strong>
+              <span>Lindegracht 45, 1015 KH Amsterdam</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <strong>Openingstijden</strong>
+              <span>Wo – Do: 18:00 – 22:30</span>
+              <span>Vr – Za: 17:30 – 23:00</span>
+              <span>Zo: 17:00 – 21:30</span>
+              <span>Ma – Di: Gesloten</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-car"></i></div>
+            <div>
+              <strong>Parkeren</strong>
+              <span>Parkeergarage Jordaan op 200m</span>
+              <span>Valet parking op aanvraag</span>
+            </div>
+          </div>
+          <div class="reservatie__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.1337571048213!2d4.877583!3d52.374004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609b39218c3b7%3A0x5a0f47e85ee9aee!2sLindengracht%2C%20Amsterdam!5e0!3m2!1snl!2snl!4v1699000000000" width="100%" height="200" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" title="Brasserie De Linde locatie"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container footer__top-inner">
+        <div class="footer__ornament">
+          <span class="ornament-line"></span>
+          <i class="fa-solid fa-leaf"></i>
+          <span class="ornament-line"></span>
+        </div>
+        <h3>Brasserie De Linde</h3>
+        <p>Lindegracht 45 · Amsterdam · <a href="tel:+31206543210">020 – 654 32 10</a></p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__inner">
+      <div class="footer__nav">
+        <h4>Bezoek</h4>
+        <ul>
+          <li><a href="#menu">Seizoensmenu</a></li>
+          <li><a href="#chef">De Chef</a></li>
+          <li><a href="#sfeer">Sfeer & Interieur</a></li>
+          <li><a href="#verhaal">Ons Verhaal</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <h4>Reserveren</h4>
+        <ul>
+          <li><a href="#reservatie">Tafel Reserveren</a></li>
+          <li><a href="#reservatie">Privé Dining</a></li>
+          <li><a href="#reservatie">Zakelijk Diner</a></li>
+          <li><a href="#reservatie">Cadeaubon</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <h4>Informatie</h4>
+        <ul>
+          <li><a href="#">Allergenen Menu</a></li>
+          <li><a href="#">Duurzaamheid</a></li>
+          <li><a href="#">Pers & Media</a></li>
+          <li><a href="#">Vacatures</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 Brasserie De Linde. Alle rechten voorbehouden.</p>
+        <div class="footer__legal">
+          <a href="#">Privacyverklaring</a>
+          <a href="#">Algemene Voorwaarden</a>
+          <a href="#">Annuleringsbeleid</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <p>Wij gebruiken cookies voor een optimale beleving. <a href="#" class="cookie-link">Meer info</a></p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--decline" id="cookieDecline">Weigeren</button>
+        <button class="cookie-btn cookie-btn--accept" id="cookieAccept">Akkoord</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
