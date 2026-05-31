@@ -83,7 +83,8 @@
           <span class="logo__sub">Fine Dining · Amsterdam</span>
         </div>
       </a>
-      <ul class="navbar__links" id="navLinks">
+      <!-- Desktop nav links (verborgen op mobiel via CSS) -->
+      <ul class="navbar__links--desktop">
         <li><a href="#verhaal" class="nav-link">Ons Verhaal</a></li>
         <li><a href="#menu" class="nav-link">Menu</a></li>
         <li><a href="#chef" class="nav-link">De Chef</a></li>
@@ -96,6 +97,16 @@
       </button>
     </div>
   </nav>
+
+  <!-- Mobile menu — buiten navbar om iOS sticky/fixed bug te vermijden -->
+  <ul class="navbar__links" id="navLinks">
+    <li><a href="#verhaal" class="nav-link">Ons Verhaal</a></li>
+    <li><a href="#menu" class="nav-link">Menu</a></li>
+    <li><a href="#chef" class="nav-link">De Chef</a></li>
+    <li><a href="#sfeer" class="nav-link">Sfeer</a></li>
+    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+    <li><a href="#reservatie" class="btn btn--gold">Reserveer</a></li>
+  </ul>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">

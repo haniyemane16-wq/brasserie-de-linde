@@ -189,7 +189,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .logo__name { font-family:var(--font-serif); font-size:1.25rem; font-weight:500; color:var(--clr-cream); letter-spacing:0.02em; }
 .logo__sub { font-size:0.62rem; color:var(--clr-gold); letter-spacing:0.14em; text-transform:uppercase; }
 
-.navbar__links { display:flex; align-items:center; gap:6px; list-style:none; }
+/* Desktop nav — altijd zichtbaar op desktop, verborgen op mobiel */
+.navbar__links--desktop { display:flex; align-items:center; gap:6px; list-style:none; }
+/* Mobile menu — buiten navbar, verborgen tot geopend */
+.navbar__links { display:none; list-style:none; position:fixed; top:76px; left:0; right:0; bottom:0; background:#0F1A0F; flex-direction:column; align-items:stretch; z-index:2000; overflow-y:auto; padding:8px 0 24px; }
+.navbar__links.open { display:flex; }
 .nav-link { color:rgba(255,255,255,0.65); font-size:0.82rem; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; padding:8px 14px; transition:color var(--transition); }
 .nav-link:hover, .nav-link.active { color:var(--clr-gold); }
 
@@ -536,26 +540,25 @@ textarea { resize:vertical; min-height:90px; }
 @media (max-width:768px) {
   .topbar { display:none; }
 
-  /* ── Mobile menu: hangs directly below the navbar bar ── */
-  .navbar__links {
-    position: fixed;
-    top: 76px;          /* height of the navbar */
-    left: 0;
-    right: 0;
-    bottom: 0;          /* full remaining height so it covers the page */
-    background: #0F1A0F; /* solid dark-green – no transparency */
-    border-top: 1px solid rgba(201,168,76,0.2);
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* items start from the top, not centred */
-    padding-top: 40px;
-    gap: 4px;
-    transform: translateX(100%);
-    transition: transform .4s cubic-bezier(0.4,0,0.2,1);
-    z-index: 1001;
-    overflow-y: auto;
+  /* Desktop nav verbergen op mobiel */
+  .navbar__links--desktop { display: none; }
+  /* Mobile menu links stijl */
+  .navbar__links .nav-link {
+    display: block;
+    padding: 16px 32px;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(232,221,208,0.85);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
   }
-  .navbar__links.open { transform: translateX(0); }
+  .navbar__links li:last-child { padding: 16px 32px 0; }
+  .navbar__links .btn--gold {
+    display: block;
+    text-align: center;
+    padding: 14px 32px;
+    margin: 0 32px;
+  }
   .navbar__toggle { display:flex; }
   .nav-link {
     font-size: 1.1rem;
