@@ -165,7 +165,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ===== NAVBAR ===== */
 .navbar {
   position: sticky; top: 0; z-index: 1000;
-  background: rgba(15,26,15,0.94);
+  background: #1A2E1A; /* solid fallback for browsers without backdrop-filter */
+  background: rgba(15,26,15,0.97);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(201,168,76,0.12);
@@ -534,17 +535,50 @@ textarea { resize:vertical; min-height:90px; }
 
 @media (max-width:768px) {
   .topbar { display:none; }
-  .navbar__links { position:fixed; inset:0; top:76px; background:rgba(10,16,10,0.98); backdrop-filter:blur(20px); flex-direction:column; align-items:center; justify-content:center; gap:8px; transform:translateX(100%); transition:transform .5s cubic-bezier(0.4,0,0.2,1); z-index:999; }
-  .navbar__links.open { transform:translateX(0); }
+
+  /* ── Mobile menu: hangs directly below the navbar bar ── */
+  .navbar__links {
+    position: fixed;
+    top: 76px;          /* height of the navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;          /* full remaining height so it covers the page */
+    background: #0F1A0F; /* solid dark-green – no transparency */
+    border-top: 1px solid rgba(201,168,76,0.2);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* items start from the top, not centred */
+    padding-top: 40px;
+    gap: 4px;
+    transform: translateX(100%);
+    transition: transform .4s cubic-bezier(0.4,0,0.2,1);
+    z-index: 999;
+    overflow-y: auto;
+  }
+  .navbar__links.open { transform: translateX(0); }
   .navbar__toggle { display:flex; }
-  .nav-link { font-size:1.2rem; padding:14px 28px; }
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 16px 32px;
+    color: rgba(255,255,255,0.85);
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+  }
+  /* last item is the gold CTA button – give it some breathing room */
+  .navbar__links li:last-child { margin-top: 24px; }
+  .navbar__links .btn--gold { padding: 14px 44px; font-size: 0.85rem; }
+
   .section { padding:64px 0; }
   .hero__title { font-size:3rem; }
-  .hero__actions { flex-direction:column; }
+  .hero__actions { flex-direction:column; align-items:flex-start; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
   .hero__awards { flex-direction:column; gap:10px; }
   .award-divider { display:none; }
   .quote-section__inner { flex-direction:column; gap:20px; }
   .quote-line { display:none; }
+  blockquote p { font-size: 1.2rem; }
   .sfeer__gallery { grid-template-columns:1fr; grid-template-rows:auto; padding:0 28px; }
   .gallery-item { height:240px; }
   .gallery-item--wide { grid-column:span 1; }
@@ -552,21 +586,51 @@ textarea { resize:vertical; min-height:90px; }
   .menu-tab { flex:1; min-width:45%; text-align:center; }
   .menu-panel__grid { grid-template-columns:1fr; }
   .form-row { grid-template-columns:1fr; }
+  .reservatie-form { padding: 24px 20px; }
   .footer__inner { grid-template-columns:1fr; gap:28px; }
   .footer__bottom-inner { flex-direction:column; text-align:center; }
   .footer__legal { flex-wrap:wrap; justify-content:center; }
-  .verhaal__stats { gap:16px; }
+  .verhaal__stats { gap:16px; justify-content:space-around; }
   .scroll-top { bottom:20px; right:20px; }
+  .menu__footer p { font-size: 0.8rem; }
+  .reviews__rating { flex-direction:column; gap:6px; }
+  .prive__list li { font-size: 0.85rem; }
 }
 
 @media (max-width:480px) {
+  .container { padding: 0 18px; }
   .hero__title { font-size:2.4rem; }
+  .hero__sub { font-size:0.92rem; line-height:1.7; }
+  .hero__sub br { display:none; } /* prevent awkward mid-sentence breaks */
   .section-title { font-size:2rem; }
+  .section { padding: 52px 0; }
   .verhaal__img--accent { display:none; }
   .verhaal__badge { display:none; }
+  .verhaal__img--main { height: 280px; }
+  .verhaal__stats { flex-direction:column; align-items:flex-start; gap:12px; padding-top:20px; }
+  .v-stat { display:flex; align-items:center; gap:12px; }
+  .v-stat__num { font-size:1.6rem; }
   .gallery-item { height:200px; }
+  .sfeer__gallery { padding: 0 18px; }
   .menu__tabs { flex-direction:column; }
-  .menu-tab { border-right:none; border-bottom:1px solid rgba(201,168,76,0.15); }
+  .menu-tab { border-right:none; border-bottom:1px solid rgba(201,168,76,0.15); flex:none; width:100%; }
   .menu-tab:last-child { border-bottom:none; }
-  .hero__sub { font-size:0.95rem; }
+  .menu-item img { height: 180px; }
+  .menu-item__info { padding: 18px; }
+  .menu__footer p { font-size: 0.76rem; letter-spacing:0.02em; }
+  .review-card { padding: 22px 18px; }
+  .reservatie-form { padding: 20px 16px; }
+  .chef__img { height: 320px; }
+  .chef__quote-card { position:static; margin-top:16px; max-width:100%; }
+  .prive__visual img { height: 260px; }
+  .footer__top h3 { font-size: 1.4rem; }
+  .footer__bottom-inner { gap:8px; }
+  .hero__actions { gap:12px; }
+  .btn--lg { padding: 14px 28px; }
+  .quote-section { padding: 44px 0; }
+  blockquote p { font-size:1.1rem; }
+  .hero__ornament { margin-bottom: 16px; }
+  .hero__pretitle { font-size: 0.68rem; }
+  .hero__awards { gap:8px; }
+  .award-item { font-size: 0.73rem; }
 }
